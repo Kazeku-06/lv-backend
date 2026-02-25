@@ -1,0 +1,87 @@
+### PRODUCT CATEGORIES API
+@baseUrl = http://localhost:8000/api
+@categoryId = 1
+
+### 1. GET Request - Get All Product Categories
+GET {{baseUrl}}/product-categories
+Accept: application/json
+
+###
+
+### 2. GET By ID Request - Get Product Category by ID
+GET {{baseUrl}}/product-categories/{{categoryId}}
+Accept: application/json
+
+###
+
+### 3. POST Request - Create New Product Category
+POST {{baseUrl}}/product-categories
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "New Category",
+    "description": "Category created from REST Client"
+}
+
+###
+
+### 4. PATCH Request - Update Product Category
+PATCH {{baseUrl}}/product-categories/{{categoryId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "description": "Updated description using PATCH request"
+}
+
+###
+
+### 5. DELETE Request - Delete Product Category
+DELETE {{baseUrl}}/product-categories/{{categoryId}}
+Accept: application/json
+
+### ----------------------------------------------------
+
+### PRODUCTS API
+@productId = 1
+
+### 1. GET Request - Get All Products
+GET {{baseUrl}}/products
+Accept: application/json
+
+###
+
+### 2. GET By ID Request - Get Product by ID
+GET {{baseUrl}}/products/{{productId}}
+Accept: application/json
+
+###
+
+### 3. POST Request - Create New Product
+POST {{baseUrl}}/products
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "New Product",
+    "price": 100000,
+    "category_id": 1
+}
+
+###
+
+### 4. PATCH Request - Update Product
+PATCH {{baseUrl}}/products/{{productId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "price": 150000
+}
+
+###
+
+### 5. DELETE Request - Delete Product
+DELETE {{baseUrl}}/products/{{productId}}
+Accept: application/json
